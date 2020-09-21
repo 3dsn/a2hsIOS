@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="./botao.js" defer></script>
+  <!-- <link rel="manifest" href="manifest.json"> -->
+  <link href="style.css" rel="stylesheet">
+  <link rel="manifest" href="./manifest.json">
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#2196f3" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+  <meta name="msapplication-starturl" content="/index.html">
+  <!-- apple support to PWA -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="./images/icons/icon-192x192.png">
+  <!-- Script for mobile devices, it automatically shows an overlaying message encouraging 
+  to add the web app to the homescreen.Compatible with iOS 6+ and Chrome for Android (soon WinPhone) -->
+  <link rel="stylesheet" type="text/css" href="addtohomescreen.css">
+  <script src="./addtohomescreen.min.js" defer></script>
+  <title>Teste de PWA</title>
+</head>
+
+<body>
+  <noscript>
+    <h2> Se JavaScript is disabled! Mostra essa mensagem </h2>
+  </noscript>
+  <h1> Nosso teste de PWA</h1>
+  <div class="center">
+    <button class="add-button">Adicione na sua tela Android</button>
+    <button onclick="addToHomescreen({
+      onAdd: function () {
+        alert('Welcome to the homescreen!');
+      }
+    })">Add homescreen IOS</button>
+  </div>
+</body>
+
+</html>
